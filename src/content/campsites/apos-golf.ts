@@ -2,135 +2,106 @@ import type { CampsiteConfig } from "../types";
 
 /**
  * APOS Golfacademy & Shop — Wohnmobil-Stellplatz, Velden am Wörthersee, Kärnten.
- * Alle Texte/Fakten belegt aus apos-golf.com (Stand-Scrape 2026-06, Quelle war
- * per Google-Translate ins Englische übersetzt — hier ehrlich zurück ins Deutsche).
- * Bilder = ausschließlich eigene APOS-Fotos in /public/campsites/apos-golf/.
+ * Alle Texte/Fakten belegt aus apos-golf.com (Stand-Scrape 2026-06, Google-Translate-Scrape).
+ * Bilder = ausschließlich eigene APOS-Fotos in /public/campsites/apos-golf/, alle vision-geprüft.
  *
- * EHRLICH:
- * - Dies ist KEIN klassischer Campingplatz, sondern ein Wohnmobil-STELLPLATZ an
- *   einer Golfanlage: max. 24 h, First-Come (keine Reservierung), Barzahlung.
- * - NICHT "am See": der Platz liegt an der Klagenfurter Straße; Strandbad Wrann
- *   ~3 Gehminuten, Zentrum ~5 Min, Seepromenade 0,8 km → daher KEIN `see`-Feld,
- *   nur ehrliche Gehzeiten im Text.
- * - Galerie hat zu wenige eindeutig belegbare Eigenfotos → images: [] (Sektion
- *   blendet sich ehrlich aus).
- * - Keine eindeutige Auszeichnung → awards bleibt leer (ÖGV-/PGA-Zertifizierung
- *   nur als Vertrauenstext, kein "Award").
+ * EHRLICH: Dies ist KEIN klassischer Campingplatz, sondern ein Wohnmobil-STELLPLATZ an einer
+ * Golfanlage (max. 24 h, First-Come, keine Reservierung, Barzahlung). Durchgehend als
+ * "Wohnmobil-Stellplatz" geframt. KEIN `see`-Feld — der Platz liegt an der Klagenfurter Straße,
+ * NICHT am Ufer (3 Gehmin. zum Strandbad Wrann, 5 Min. ins Zentrum). Preise real aus /stellplatz.
+ * Keine eigenen Unterkünfte (Apartments sind extern, sunandsee.at → bewusst nicht geführt) →
+ * `mobilheime` weggelassen. Zu wenige verschiedene Eigenfotos → Galerie ehrlich leer.
  */
 const IMG = "/campsites/apos-golf";
 
 export const aposGolf: CampsiteConfig = {
   name: "APOS Golfacademy & Shop",
-  shortName: "APOS Golf",
+  shortName: "APOS",
   slug: "apos-golf",
   ort: "Velden am Wörthersee",
   region: "Kärnten",
   brandKind: "Wohnmobil-Stellplatz",
-  // Kein `see`: der Stellplatz liegt nicht am Ufer, nur wenige Gehminuten entfernt.
   regionLong: "Velden am Wörthersee · Kärnten · Österreich",
 
   claim: "Dein Wohnmobil-Stellplatz an der Golfanlage in Velden am Wörthersee",
   claimEmphasis: "an der Golfanlage",
   intro:
-    "Stell dein Wohnmobil direkt an der APOS Golfacademy ab — fünf Gehminuten ins Zentrum von Velden, drei zum Strandbad Wrann am Wörthersee. Die Golfanlage nutzt du gleich mit.",
+    "Geräumiger Wohnmobil-Stellplatz direkt an der Golfacademy von Armin Posratschnig — fünf Gehminuten ins Zentrum von Velden, drei Minuten zum Strandbad Wrann. Die Nutzung der Golfanlage inklusive Leihschläger und Übungsbällen ist im Preis schon dabei.",
 
-  logo: { src: `${IMG}/apos-logo.png`, alt: "APOS Golfacademy & Shop Logo" },
+  logo: { src: `${IMG}/apos-logo.webp`, alt: "APOS Golf Shop & Academy Logo" },
 
   statement: {
-    text: "Bei uns parkst du nicht irgendwo — du stehst mitten in der Golfanlage, nur wenige Gehminuten von Velden und dem Wörthersee.",
-    emphasis: "mitten in der Golfanlage",
+    text: "Mit dem Wohnmobil anreisen, parken und gleich aufs Grün — Golfen ist hier schon im Stellplatzpreis dabei.",
+    emphasis: "schon im Stellplatzpreis dabei",
   },
 
   pillars: [
     {
-      title: "Velden & der Wörthersee",
-      text: "Zentrum von Velden in 5 Gehminuten, Strandbad Wrann in 3 — Seepromenade, Casino und der türkise Wörthersee gleich um die Ecke.",
-      image: { src: `${IMG}/pillar-woerthersee.webp`, alt: "Blick über Velden und den türkisen Wörthersee mit den Karawanken" },
+      title: "Golf inklusive",
+      text: "Im Stellplatzpreis enthalten: Nutzung der Golfanlage mit 1 Leihschläger und 24 Übungsbällen pro Person und Tag — geübt wird auf einer Driving Range, die abends sogar beleuchtet ist.",
+      image: { src: `${IMG}/golf-lektion.webp`, alt: "Golfstunde auf der Driving Range der APOS Golfacademy in Velden" },
     },
     {
-      title: "Golf gleich inklusive",
-      text: "Die Nutzung der Golfanlage ist im Stellplatzpreis enthalten — inkl. 1 Leihschläger und 24 Übungsbällen pro Person und Tag.",
-      image: { src: `${IMG}/pillar-golf-inklusive.webp`, alt: "Golfer beim Abschlag auf der Anlage der APOS Golfacademy" },
+      title: "Velden & der Wörthersee in Gehweite",
+      text: "Fünf Gehminuten ins Ortszentrum von Velden, drei Minuten zum Strandbad Wrann und rund 0,8 km zur Seepromenade — Stadt, See und Golf an einem Platz.",
+      image: { src: `${IMG}/velden-woerthersee.webp`, alt: "Blick über Velden und den türkisen Wörthersee bis zu den Karawanken" },
     },
     {
-      title: "Jeder ist willkommen",
-      text: "Keine Mitgliedschaft nötig: Hier macht man die ersten Schritte im Golf — leger gekleidet, mit oder ohne Unterricht, Ausrüstung zum Leihen.",
-      image: { src: `${IMG}/pillar-jeder-willkommen.webp`, alt: "Golfunterricht auf der Driving Range der APOS Golfacademy" },
+      title: "Profi-Golfshop & Custom Fit",
+      text: "Direkt am Platz: ein Professional Golf Shop mit Markenausrüstung und individuelles Custom Fit mit FlightScope durch PGA-Professionals.",
+      image: { src: `${IMG}/profishop.webp`, alt: "Innenraum des Professional Golf Shops der APOS Golfacademy" },
     },
   ],
 
   usps: [
-    "Golfanlage-Nutzung inklusive",
-    "1 Leihschläger & 24 Bälle p. P./Tag",
-    "Gratis WLAN, WC & Wasser",
-    "Ver-/Entsorgung grau & schwarz",
-    "Keine Reservierung – First-Come",
+    "Golfnutzung inklusive",
+    "1 Leihschläger & 24 Bälle/Person/Tag",
+    "Driving Range – abends beleuchtet",
+    "5 Min. ins Zentrum von Velden",
     "3 Min. zum Strandbad Wrann",
+    "Strom, Frischwasser & V+E am Platz",
+    "Gratis WC, Wasser & WLAN",
+    "Hunde willkommen",
   ],
 
   trust: {
     heading: "Worauf du dich am APOS-Stellplatz verlassen kannst",
     headingEmphasis: "verlassen",
     intro:
-      "Persönlich geführt von Armin Posratschnig und seinem Team. Klare Preise, Anreise rund um die Uhr und eine ÖGV-zertifizierte Golfanlage mit PGA-Professionals gleich nebenan — ehrlich und unkompliziert. Bezahlt wird in bar.",
+      "Persönlich geführt von Armin Posratschnig, PGA Qualified Head Professional und Gründer der APOS Golfacademy (seit 1993). Eine gepflegte Golfanlage mit Profi-Shop und Custom Fit, dazu ein geräumiger Wohnmobil-Stellplatz mitten in Velden — mit fairen, transparenten Preisen und Golfnutzung inklusive.",
   },
 
-  // Keine eindeutig belegbare Auszeichnung auf der Quelle → ehrlich leer.
+  // Keine eindeutige Auszeichnung auf der Quelle (PGA-Qualifikation & ÖGV sind Qualifikationen,
+  // keine Awards) → ehrlich leer (Band zeigt nur USP-Pills).
   awards: [],
 
-  // Quelle nennt keine festen Saisonmonate; "Anreise und Parken jederzeit
-  // möglich" (24 h, ganzjährig) — bei Frost kein Wasser/keine Dusche (im Text/Report vermerkt).
-  saison: { von: "Ganzjährig", bis: "rund um die Uhr" },
+  // Quelle nennt keine festen Saisonmonate, aber "Anreise rund um die Uhr / jederzeit möglich"
+  // + Frost-Hinweis → ganzjährig abgeleitet (Winterpause beim Kunden gegenchecken — siehe REPORT).
+  saison: { von: "Jänner", bis: "Dezember" },
 
   hero: {
-    aerial: {
-      src: `${IMG}/hero-golfanlage.webp`,
-      alt: "Golfanlage der APOS Golfacademy vor der Bergkulisse bei Velden am Wörthersee",
-    },
+    aerial: { src: `${IMG}/hero-golfanlage.webp`, alt: "Golfgruppe auf der Anlage der APOS Golfacademy vor der Bergkulisse bei Velden am Wörthersee" },
   },
 
   camping: {
-    heading: "Der Stellplatz",
+    heading: "Der Wohnmobil-Stellplatz",
     intro:
-      "Ein großzügiger, ebener Stellplatz (6 × 10 m) direkt an der APOS Golfacademy — Anreise und Parken rund um die Uhr, ganz ohne Reservierung. Es gilt das First-Come-Prinzip, Aufenthalt bis 24 Stunden.",
+      "Eine großzügige Stellfläche von 6 × 10 Metern für maximal 24 Stunden, direkt an der Golfanlage. Eine Reservierung ist nicht möglich — Anreise rund um die Uhr nach dem First-Come-Prinzip.",
     features: [
       {
-        title: "Wohnmobile an der Golfanlage",
-        text: "Dein Stellplatz liegt unmittelbar an der Anlage — ebener Untergrund, viel Wiese ringsum und rund um die Uhr erreichbar.",
-        image: { src: `${IMG}/stellplatz-wohnmobile.webp`, alt: "Wohnmobile auf dem Stellplatz an der APOS Golfacademy" },
+        title: "Stellplatz für Wohnmobile",
+        text: "Geräumige Stellfläche (6 × 10 m) für max. 24 Stunden inkl. zwei Personen — Anreise und Abreise sind rund um die Uhr möglich.",
+        image: { src: `${IMG}/stellplatz-wohnmobile.webp`, alt: "Wohnmobile auf dem Stellplatz der APOS Golfacademy in Velden" },
       },
       {
-        title: "Zufahrt & First-Come",
-        text: "Anreise und Parken sind jederzeit möglich — keine Reservierung, es gilt das First-Come-Prinzip. Bezahlung in bar.",
-        image: { src: `${IMG}/stellplatz-zufahrt.webp`, alt: "Zufahrt zur APOS Golfacademy an der Klagenfurter Straße in Velden" },
+        title: "Anlage, Range & Versorgung",
+        text: "Auf dem Gelände der Golfacademy: Driving Range, Frischwasser, Entsorgung von Grau- und Schwarzwasser, Müllplatz, Strom (€ 1/kWh) und Warmduschen (€ 2,50/3 Min) — alles direkt am Platz.",
+        image: { src: `${IMG}/anlage-range.webp`, alt: "Gelände der APOS Golfacademy mit Driving Range und Versorgungsgebäude" },
       },
       {
-        title: "Ver- & Entsorgung",
-        text: "Frischwasser, Entsorgung von Grau- und Schwarzwasser, Strom (€ 1/kWh), Damen-/Herren-WC, Dusche und gratis WLAN — alles vor Ort.",
-        image: { src: `${IMG}/ver-entsorgung.webp`, alt: "Hinweisschild zur Ver- und Entsorgungsstation für Wohnmobile" },
-      },
-    ],
-  },
-
-  aktivitaeten: {
-    heading: "Golf, Shop & Custom Fit",
-    intro:
-      "Bei uns ist jeder willkommen — eine Mitgliedschaft brauchst du nicht. Vom ersten Schnupperkurs bis zum lasergenauen Custom Fit: alles direkt an deinem Stellplatz.",
-    items: [
-      {
-        title: "Custom Fit mit Flight Scope",
-        text: "Jede Landeentfernung wird per Lasertechnik gemessen — für 100 % Kontrolle über dein Übungsergebnis und das passende Schlägerset.",
-        image: { src: `${IMG}/custom-fit.webp`, alt: "Flight-Scope-Schlaganalyse mit Ballflugkurve auf dem Bildschirm" },
-      },
-      {
-        title: "Profi-Golfshop & Bistro",
-        text: "Der Profi-Golfshop führt Schläger, Mode und Technik von Top-Marken; nebenan lädt das Bistro mit Außenbereich zum Verweilen.",
-        image: { src: `${IMG}/pro-shop.webp`, alt: "Innenraum des Profi-Golfshops der APOS Golfacademy mit Schlägern" },
-      },
-      {
-        title: "Driving Range & Übungsgelände",
-        text: "25 feste Abschlagplätze (4 überdacht), Rasenabschläge, Putting- und Pitching-Green, Bunker und Par-3 — die Range ist 24 h geöffnet, abends beleuchtet.",
-        image: { src: `${IMG}/driving-range.webp`, alt: "Driving Range und Übungsgelände der APOS Golfacademy in Velden" },
+        title: "Mitten an der Golfanlage",
+        text: "Der Platz liegt direkt an der APOS Golfacademy an der Klagenfurter Straße — fünf Gehminuten ins Zentrum, drei Minuten zum Strandbad Wrann.",
+        image: { src: `${IMG}/golf-zufahrt.webp`, alt: "Zufahrt zur APOS Golfacademy mit GOLF-Schild an der Klagenfurter Straße" },
       },
     ],
   },
@@ -138,47 +109,37 @@ export const aposGolf: CampsiteConfig = {
   anreise: {
     heading: "So findest du uns",
     modes: [
-      {
-        title: "Mit dem Wohnmobil",
-        text: "Klagenfurter Straße 33, A-9220 Velden am Wörthersee. GPS 46°37′13″N 14°03′20″E.",
-      },
-      {
-        title: "Lage & Gehzeiten",
-        text: "Zentrum 5 Minuten, Strandbad Wrann 3 Minuten, Seepromenade 0,8 km, Casino 0,8 km, Touristinfo 1 km — alles bequem zu Fuß.",
-      },
-      {
-        title: "Anreise rund um die Uhr",
-        text: "Anreise und Parken sind jederzeit möglich. Keine Reservierung — es gilt das First-Come-Prinzip, Aufenthalt bis 24 Stunden, Zahlung in bar.",
-      },
+      { title: "Adresse", text: "APOS Golfacademy & Shop, Klagenfurter Straße 33, 9220 Velden am Wörthersee. GPS: 46°37'13″N, 14°03'20″E." },
+      { title: "Mit dem Auto", text: "Über die A2 Süd-Autobahn bis Velden, dann Richtung Ortszentrum an die Klagenfurter Straße — Anreise und Parken sind rund um die Uhr möglich." },
+      { title: "Lage zu Fuß", text: "Fünf Gehminuten ins Zentrum und zu Geschäften, drei Minuten zum Strandbad Wrann, rund 0,8 km zur Seepromenade und zum Casino." },
     ],
   },
 
-  // Zu wenige eindeutig belegbare Eigenfotos für das 4er-Bento → ehrlich leer,
-  // die Galerie-Sektion blendet sich dadurch automatisch aus.
   galerie: {
-    heading: "Eindrücke",
-    headingEmphasis: "Eindrücke",
-    intro: "Eindrücke vom Stellplatz und der Golfanlage in Velden am Wörthersee.",
+    heading: "Golf, Stellplatz & Wörthersee",
+    headingEmphasis: "Wörthersee",
+    intro:
+      "Ein paar Eindrücke von der APOS Golfacademy und dem Wohnmobil-Stellplatz in Velden am Wörthersee.",
     tag: "Velden am Wörthersee",
+    // Zu wenige eindeutig belegbare, motivisch verschiedene Eigenfotos → Galerie blendet sich aus.
     images: [],
   },
 
   booking: {
-    heading: "Stellplatz anfragen",
+    heading: "Stellplatz-Preise",
     intro:
-      "Reservieren ist nicht nötig: Es gilt das First-Come-Prinzip, Anreise rund um die Uhr, Aufenthalt bis 24 Stunden. Schreib uns einfach bei Fragen — Armin Posratschnig meldet sich persönlich.",
+      "Eine Reservierung ist nicht möglich — der Stellplatz wird nach dem First-Come-Prinzip vergeben (max. 24 Stunden, Anreise rund um die Uhr). Bei Fragen erreichst du Armin Posratschnig direkt.",
     pricesArePlaceholder: false,
     priceNote:
-      "Grundpreis Wohnmobil/24 h inkl. 2 Personen · € 3 je weitere Person (Kinder bis 8 J. frei) · zzgl. € 2,70 Ortstaxe p. P./Nacht (Kinder bis 16 J. frei) · Strom € 1/kWh · Dusche € 2,50/3 Min · Barzahlung · Wohnwagen-Gespann € 35 = € 25 Anhänger (am Stellplatz) + € 10 Zugfahrzeug (Parkplatz der Anlage)",
+      "Grundpreis Wohnmobil € 25 für max. 24 h inkl. 2 Personen, € 3 je weitere Person (Kinder bis 8 frei). Zzgl. € 2,70 Ortstaxe pro Person/Nacht (Kinder bis 16 frei), Hund € 2/Tag. Extras: Strom € 1/kWh, Warmdusche € 2,50/3 Min. Wohnwagen-Gespann € 35 (€ 25 Anhänger + € 10 Zugfahrzeug). Zahlung bar.",
     highlight: {
-      title: "Golfanlage inklusive",
-      text: "Im Stellplatzpreis enthalten: Nutzung der Golfanlage inkl. 1 Leihschläger und 24 Übungsbällen pro Person und Tag.",
+      title: "Golf inklusive",
+      text: "Im Stellplatzpreis enthalten: Nutzung der Golfanlage mit 1 Leihschläger und 24 Übungsbällen pro Person und Tag — dazu WC, Wasser und WLAN gratis.",
     },
     categories: [
-      // Reale Stellplatz-Preise APOS 2026 (Quelle: apos-golf.com/stellplatz).
-      // perNight = Grundpreis 24 h für 2 Personen; perExtraGuest = € 3 je weitere Person.
-      { id: "wohnmobil", label: "Wohnmobil 24 h", perNight: 25, perExtraGuest: 3 },
-      // Gespann = € 25 Anhänger/Stellplatz + € 10 Zugfahrzeug (Parkplatz der Anlage) = € 35.
+      // Reale Preise aus apos-golf.com/stellplatz (Stand-Scrape 2026-06).
+      { id: "wohnmobil", label: "Wohnmobil (max. 24 h)", perNight: 25, perExtraGuest: 3 },
+      // Gespann € 35 = € 25 Anhänger + € 10 Zugfahrzeug (Arithmetik, offengelegt im priceNote).
       { id: "gespann", label: "Wohnwagen-Gespann", perNight: 35, perExtraGuest: 3 },
     ],
   },
@@ -189,8 +150,9 @@ export const aposGolf: CampsiteConfig = {
     mail: "office@apos-golf.com",
     facebook: "https://www.facebook.com/aposgolf",
     adresse: "Klagenfurter Straße 33 · 9220 Velden am Wörthersee · Kärnten",
-    // Explizite Koordinaten aus der Quelle (Street-View-Link apos-golf.com).
-    coords: { lat: 46.6195288, lng: 14.0545774 },
+    // Koordinaten explizit aus der Quelle (Street-View-Link auf apos-golf.com:
+    // /maps/@46.6195288,14.0545774) — nicht erfunden.
+    coords: { lat: 46.619469, lng: 14.0548 },
   },
 
   languages: ["DE"],
@@ -202,32 +164,31 @@ export const aposGolf: CampsiteConfig = {
       children: [
         { label: "Der Stellplatz", href: "#camping" },
         { label: "Ver- & Entsorgung", href: "#camping" },
-        { label: "Preise", href: "#booking" },
+        { label: "Lage", href: "#anreise" },
       ],
     },
     {
       label: "Golf",
-      href: "#aktivitaeten",
+      href: "#booking",
       children: [
-        { label: "Custom Fit", href: "#aktivitaeten" },
-        { label: "Profi-Golfshop", href: "#aktivitaeten" },
-        { label: "Driving Range", href: "#aktivitaeten" },
+        { label: "Golf inklusive", href: "#booking" },
+        { label: "Die Anlage", href: "#camping" },
+        { label: "Profi-Shop & Custom Fit", href: "#camping" },
       ],
     },
     {
-      label: "Lage",
-      href: "#anreise",
-      children: [
-        { label: "Velden am Wörthersee", href: "#anreise" },
-        { label: "Gehzeiten", href: "#anreise" },
-        { label: "Anreise", href: "#anreise" },
-      ],
-    },
-    {
-      label: "Preise & Kontakt",
+      label: "Preise",
       href: "#booking",
       children: [
         { label: "Stellplatz-Preise", href: "#booking" },
+        { label: "Leistungen", href: "#booking" },
+      ],
+    },
+    {
+      label: "Kontakt",
+      href: "#anreise",
+      children: [
+        { label: "Anreise", href: "#anreise" },
         { label: "Kontakt", href: "#anreise" },
       ],
     },
