@@ -3,7 +3,11 @@ import type { CampsiteConfig } from "../types";
 /**
  * APOS Golfacademy & Shop — Wohnmobil-Stellplatz, Velden am Wörthersee, Kärnten.
  * Alle Texte/Fakten belegt aus apos-golf.com (Stand-Scrape 2026-06, Google-Translate-Scrape).
- * Bilder = ausschließlich eigene APOS-Fotos in /public/campsites/apos-golf/, alle vision-geprüft.
+ * Bilder = ausschließlich eigene, provenienzgebundene APOS-Bilder in /public/campsites/apos-golf/.
+ * Pillar 3 nutzt bewusst die echte Alpe-Adria-Golf-Card-Grafik (apos-golf.com/golfplaetze, APOS ist
+ * Partner) + belegten Text — das ursprüngliche „golf-kurse“-Bild war ein generisches Stockfoto
+ * (springende Leute, mediterranes Resort) und wurde ersetzt; es gibt kein großes, echtes Kursfoto
+ * in der Library (das einzige echte Gruppen-/Platzfoto ist das Hero).
  *
  * EHRLICH: Dies ist KEIN klassischer Campingplatz, sondern ein Wohnmobil-STELLPLATZ an einer
  * Golfanlage (max. 24 h, First-Come, keine Reservierung, Barzahlung). Durchgehend als
@@ -39,17 +43,17 @@ export const aposGolf: CampsiteConfig = {
     {
       title: "Golf inklusive",
       text: "Im Stellplatzpreis enthalten: Nutzung der Golfanlage mit 1 Leihschläger und 24 Übungsbällen pro Person und Tag — geübt wird auf einer Driving Range, die abends sogar beleuchtet ist.",
-      image: { src: `${IMG}/golf-lektion.webp`, alt: "Golfstunde auf der Driving Range der APOS Golfacademy in Velden" },
+      image: { src: `${IMG}/golf-lektion.webp`, alt: "Golferin auf der Driving Range der APOS Golfacademy in Velden am Wörthersee" },
     },
     {
-      title: "Velden & der Wörthersee in Gehweite",
-      text: "Fünf Gehminuten ins Ortszentrum von Velden, drei Minuten zum Strandbad Wrann und rund 0,8 km zur Seepromenade — Stadt, See und Golf an einem Platz.",
-      image: { src: `${IMG}/velden-woerthersee.webp`, alt: "Blick über Velden und den türkisen Wörthersee bis zu den Karawanken" },
+      title: "Persönlich geführt seit 1993",
+      text: "Gegründet von Armin Posratschnig, PGA Qualified Head Professional — über dreißig Jahre Golf-Leidenschaft fließen in Unterricht und Betrieb der Anlage. Der Gründer ist täglich vor Ort.",
+      image: { src: `${IMG}/armin-pro.webp`, alt: "Armin Posratschnig, PGA Head Professional und Gründer der APOS Golfacademy" },
     },
     {
-      title: "Profi-Golfshop & Custom Fit",
-      text: "Direkt am Platz: ein Professional Golf Shop mit Markenausrüstung und individuelles Custom Fit mit FlightScope durch PGA-Professionals.",
-      image: { src: `${IMG}/profishop.webp`, alt: "Innenraum des Professional Golf Shops der APOS Golfacademy" },
+      title: "Partner der Alpe-Adria-Golf Card",
+      text: "APOS ist Partner der Alpe-Adria-Golf Card: Mit ihr spielst du flexibel auf rund 20 Plätzen der Region — vom Einsteiger- bis zum Meisterplatz, wann und so oft du möchtest. Nicht genutzte Runden bleiben bis zum Ende der Folgesaison gültig.",
+      image: { src: `${IMG}/golf-card.webp`, alt: "Alpe-Adria-Golf Card mit Golfer auf einem Platz am Wörthersee" },
     },
   ],
 
@@ -88,11 +92,6 @@ export const aposGolf: CampsiteConfig = {
     intro:
       "Eine großzügige Stellfläche von 6 × 10 Metern für maximal 24 Stunden, direkt an der Golfanlage. Eine Reservierung ist nicht möglich — Anreise rund um die Uhr nach dem First-Come-Prinzip.",
     features: [
-      {
-        title: "Stellplatz für Wohnmobile",
-        text: "Geräumige Stellfläche (6 × 10 m) für max. 24 Stunden inkl. zwei Personen — Anreise und Abreise sind rund um die Uhr möglich.",
-        image: { src: `${IMG}/stellplatz-wohnmobile.webp`, alt: "Wohnmobile auf dem Stellplatz der APOS Golfacademy in Velden" },
-      },
       {
         title: "Anlage, Range & Versorgung",
         text: "Auf dem Gelände der Golfacademy: Driving Range, Frischwasser, Entsorgung von Grau- und Schwarzwasser, Müllplatz, Strom (€ 1/kWh) und Warmduschen (€ 2,50/3 Min) — alles direkt am Platz.",
