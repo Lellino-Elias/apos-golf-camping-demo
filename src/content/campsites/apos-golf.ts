@@ -50,7 +50,7 @@ const aposGolf: CampsiteConfig = {
   hero: {
     aerial: {
       src: `${IMG}/hero-stellplatz.webp`,
-      alt: "Begeisterte Golfer auf der Anlage der APOS Golfacademy in Velden am Wörthersee",
+      alt: "Gruppe von Golferinnen und Golfern auf der Anlage der APOS Golfacademy in Velden, mit Alpenhügeln im Hintergrund",
     },
   },
 
@@ -65,7 +65,7 @@ const aposGolf: CampsiteConfig = {
           "Die Nutzung der Anlage ist im Preis dabei — inklusive einem Leihschläger und 24 Übungsbällen pro Person und Tag. Einfach kommen und abschlagen.",
         image: {
           src: `${IMG}/golf-anlage.webp`,
-          alt: "Golferinnen und Golfer auf der Anlage der APOS Golfacademy in Velden",
+          alt: "Einfahrt zur Driving Range der APOS Golfacademy in Velden mit APOS-Bannern und gepflegtem Übungsgelände im Hintergrund",
         },
       },
       {
