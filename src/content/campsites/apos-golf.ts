@@ -82,8 +82,8 @@ const aposGolf: CampsiteConfig = {
         text:
           "Armin Posratschnig und sein Team sind vor Ort — Check-in im Shop, Zahlung in bar, und bei Fragen ist immer jemand für dich da.",
         image: {
-          src: `${IMG}/shop-check-in.webp`,
-          alt: "Blick in den APOS Golf Shop mit Schlägern und Theke — hier ist der Check-in",
+          src: `${IMG}/armin-posratschnig.webp`,
+          alt: "Armin Posratschnig, Inhaber der APOS Golfacademy, auf dem Grün — persönliche Betreuung vor Ort",
         },
       },
     ],
