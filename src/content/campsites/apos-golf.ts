@@ -73,8 +73,8 @@ const aposGolf: CampsiteConfig = {
         text:
           "Die Driving Range ist rund um die Uhr geöffnet — mit Beleuchtung auch am Abend. Zusätzliche Übungsrunden gibt es am Automaten für € 2,50 / 24 Bälle, zu jeder Tages- und Nachtzeit.",
         image: {
-          src: `${IMG}/lage-velden.webp`,
-          alt: "Svetlana Hermann auf der Driving Range der APOS Golfacademy in Velden mit Bergpanorama",
+          src: `${IMG}/driving-range.webp`,
+          alt: "Golferinnen und Golfer beim Üben auf der Driving Range der APOS Golfacademy in Velden",
         },
       },
       {
@@ -82,8 +82,8 @@ const aposGolf: CampsiteConfig = {
         text:
           "Armin Posratschnig und sein Team sind vor Ort — Check-in im Shop, Zahlung in bar, und bei Fragen ist immer jemand für dich da.",
         image: {
-          src: `${IMG}/armin-posratschnig.webp`,
-          alt: "Armin Posratschnig, Gastgeber der APOS Golfacademy",
+          src: `${IMG}/shop-check-in.webp`,
+          alt: "Blick in den APOS Golf Shop mit Schlägern und Theke — hier ist der Check-in",
         },
       },
     ],
