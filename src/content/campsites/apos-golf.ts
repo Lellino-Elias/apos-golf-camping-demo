@@ -62,7 +62,7 @@ const aposGolf: CampsiteConfig = {
       {
         title: "Golfanlage inklusive",
         text:
-          "Die Nutzung der Anlage ist im Preis dabei — inklusive einem Leihschläger und 24 Übungsbällen pro Person und Tag. Einfach kommen und abschlagen.",
+          "Leihschläger und 24 Übungsbälle pro Person und Tag sind im Stellplatz-Preis inklusive — einfach kommen und abschlagen.",
         image: {
           src: `${IMG}/stellplatz-wohnmobile.webp`,
           alt: "Wohnmobile auf dem großzügigen Stellplatz der APOS Golfacademy in Velden, bei Sonnenschein auf gepflegtem Rasen neben dem Übungsgelände",
@@ -71,7 +71,7 @@ const aposGolf: CampsiteConfig = {
       {
         title: "Range rund um die Uhr",
         text:
-          "Die Driving Range ist rund um die Uhr geöffnet — mit Beleuchtung auch am Abend. Zusätzliche Übungsrunden gibt es am Automaten für € 2,50 / 24 Bälle, zu jeder Tages- und Nachtzeit.",
+          "Die Driving Range ist rund um die Uhr beleuchtet — zusätzliche Runden gibt es am Automaten für € 2,50 / 24 Bälle.",
         image: {
           src: `${IMG}/driving-range.webp`,
           alt: "Golferinnen und Golfer beim Üben auf der Driving Range der APOS Golfacademy in Velden",
