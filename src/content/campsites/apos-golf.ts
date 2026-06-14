@@ -64,8 +64,8 @@ const aposGolf: CampsiteConfig = {
         text:
           "Die Nutzung der Anlage ist im Preis dabei — inklusive einem Leihschläger und 24 Übungsbällen pro Person und Tag. Einfach kommen und abschlagen.",
         image: {
-          src: `${IMG}/golf-anlage.webp`,
-          alt: "Einfahrt zur Driving Range der APOS Golfacademy in Velden mit APOS-Bannern und gepflegtem Übungsgelände im Hintergrund",
+          src: `${IMG}/stellplatz-wohnmobile.webp`,
+          alt: "Wohnmobile auf dem großzügigen Stellplatz der APOS Golfacademy in Velden, bei Sonnenschein auf gepflegtem Rasen neben dem Übungsgelände",
         },
       },
       {
